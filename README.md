@@ -30,7 +30,8 @@ Also, you'll have to consider that:
 - If you want a fallback, you may want to leave the `noscript` where it is.
 
 ##Customising
-I built this using LESS so it would be easy to customise if you wanted to. All the colors and margins depend on the variables at the top of the LESS file.
+I built this using LESS so it would be easy to customise if you wanted to. All the colors and margins depend on the variables at the top of the LESS file. But if you don't like LESS, no worries, you can work with the CSS file.
+
 Also you can change the text in the HTML if for example, you want to translate it. But I don't recommend changing the HTML code if you want it to stay responsive.
 
 ##License
