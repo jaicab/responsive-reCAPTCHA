@@ -2,6 +2,8 @@
 
 A responsive theme for <a href="https://www.google.com/recaptcha">reCAPTCHA</a>. I needed a reCAPTCHA for a responsive web site and the default theme didn't fit on screens smaller than 300px. So I decided to build a mobile-first, icon-free theme.
 
+<img src="https://raw.github.com/jaicab/responsive-reCAPTCHA/master/example.jpg" alt="example">
+
 Supported in all modern browsers and:
 * Internet Explorer 8.0+
 * Firefox 2.0+
