@@ -15,6 +15,7 @@ Supported in all modern browsers and:
 Before copy-pasting this, please remember that you'll need a public and private key to make reCAPTCHA work. In this case you'll see this URL two times at the end of the code: `http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY`. You'll have to replace YOUR_PUBLIC_KEY with the one you'll get at <a href="https://www.google.com/recaptcha/admin/create">reCAPTCHA's site</a>.
 Also, you'll have to consider that:
 - You must include this before the form opening tag.
+
 ```html
  <script type="text/javascript">
  var RecaptchaOptions = {
