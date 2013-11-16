@@ -25,7 +25,8 @@
 }
 #responsive_recaptcha .solution {
   margin-top: 0.5em;
-  padding: 1em;
+  padding: 0.5em;
+  padding-top: 1em;
   border-radius: 0.5em;
   background-color: #fbe098;
   color: #000000;
@@ -33,7 +34,7 @@
 }
 #responsive_recaptcha .solution input {
   display: block;
-  width: 90%;
+  width: 100%;
   margin: 0.5em auto;
   -webkit-appereance: none;
   border: 1px solid #f7c236;
@@ -67,9 +68,12 @@
   #responsive_recaptcha .solution {
     float: left;
     width: 66%;
+    margin-top: 0.5em;
+    padding: 1em;
   }
   #responsive_recaptcha .solution input {
     margin: 0.35em auto;
+    width: 90%;
   }
   #responsive_recaptcha .options {
     float: right;

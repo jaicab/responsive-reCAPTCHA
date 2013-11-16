@@ -35,7 +35,8 @@ border-radius:@recaptcha_margin;
 
 #responsive_recaptcha .solution{
   margin-top:@recaptcha_margin;
-  padding:(@recaptcha_margin*2);
+  padding:@recaptcha_margin;
+  padding-top:(@recaptcha_margin*2);
   .radius;
   background-color:@recaptcha_secondary;
   color:@recaptcha_boxtext;
@@ -43,7 +44,7 @@ border-radius:@recaptcha_margin;
 }
 #responsive_recaptcha .solution input{
   display:block;
-  width:90%;
+  width:100%;
   margin:(@recaptcha_margin) auto;
   -webkit-appereance:none;
   border:1px solid darken(@recaptcha_secondary,20%);
@@ -79,9 +80,12 @@ border-radius:@recaptcha_margin;
   #responsive_recaptcha .solution{
     float:left;
     width:66%;
+    margin-top:@recaptcha_margin;
+    padding:(@recaptcha_margin*2);
   }
   #responsive_recaptcha .solution input{
     margin:(@recaptcha_margin*0.7) auto;
+    width:90%;
   }
   #responsive_recaptcha .options{
     float:right;
