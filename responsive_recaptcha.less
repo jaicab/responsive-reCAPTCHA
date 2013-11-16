@@ -1,0 +1,91 @@
+@primary:#B71800;
+@secondary:#fbe098;
+@options:#c5523d;
+@text:#fff;
+@boxtext:#000;
+@margin:0.5em;
+.radius(){
+border-radius:@margin;
+}
+#responsive_recaptcha{
+  background-color:@primary;
+  padding:@margin;
+  border-radius:(@margin*2);
+  position:relative;
+  overflow:auto;
+  max-width:480px;
+  font:0.75em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:@text;
+}
+#responsive_recaptcha *{
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+#responsive_recaptcha a{
+  color:@text;
+  text-decoration: none;
+}
+
+#responsive_recaptcha img, #responsive_recaptcha #recaptcha_image{
+  width:100% !important;
+  height: auto !important;
+  .radius;
+}
+
+#responsive_recaptcha .solution{
+  margin-top:@margin;
+  padding:(@margin*2);
+  .radius;
+  background-color:@secondary;
+  color:@boxtext;
+  display:block;
+}
+#responsive_recaptcha .solution input{
+  display:block;
+  width:90%;
+  margin:(@margin) auto;
+  -webkit-appereance:none;
+  border:1px solid darken(@secondary,20%);
+  font:inherit;
+  font-size:150%;
+  outline:none;
+}
+#responsive_recaptcha .solution input:focus{
+  border-color:@primary;
+}
+
+#responsive_recaptcha .options{
+  margin-top:@margin;
+  .radius;
+}
+#responsive_recaptcha .options a{
+  background-color:@options;
+  display: block;
+  padding:@margin;
+  border-top:1px solid @boxtext;
+  border-left:1px solid @boxtext;
+  border-right:1px solid @boxtext;
+}
+#responsive_recaptcha .options a:first-child{
+  border-radius:@margin @margin 0 0;
+}
+#responsive_recaptcha .options a:last-child{
+  border-radius:0 0 @margin @margin;
+  border-bottom:1px solid @boxtext;
+}
+
+@media screen and (min-width:480px){
+  #responsive_recaptcha .solution{
+    float:left;
+    width:66%;
+  }
+  #responsive_recaptcha .solution input{
+    margin:(@margin*0.7) auto;
+  }
+  #responsive_recaptcha .options{
+    float:right;
+    width:34%;
+    padding-left:@margin;
+  }
+}
