@@ -12,9 +12,10 @@ Supported in all modern browsers and:
 * Opera 9.6+
 
 ##How-to
-Before copy-pasting this, please remember that you'll need a public and private key to make reCAPTCHA work. In this case you'll see this URL two times at the end of the code: `http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY`. You'll have to replace YOUR_PUBLIC_KEY with the one you'll get at <a href="https://www.google.com/recaptcha/admin/create">reCAPTCHA's site</a>.
+Before copy-pasting this, please remember that you'll need a public and private key to make reCAPTCHA work. In this case you'll see this URL two times at the end of the code: `http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY`
+You'll have to replace YOUR_PUBLIC_KEY with the one you'll get at <a href="https://www.google.com/recaptcha/admin/create">reCAPTCHA's site</a>.
 Also, you'll have to consider that:
-- You must include this before the form opening tag.
+- You must include this before the `form` opening tag.
 
 ```html
  <script type="text/javascript">
@@ -24,11 +25,11 @@ Also, you'll have to consider that:
  };
  </script>
  ```
-- You must include all the HTML and CSS. Don't worry, all the CSS is specified by id so copy&paste won't be a problem.
-- If you want a fallback, you may want to leave the noscript where it is.
+- You must include all the HTML and CSS. But don't worry, all the CSS is specified by `#responsive_recaptcha` id so copy&paste won't be a problem.
+- If you want a fallback, you may want to leave the `noscript` where it is.
 
 ##Customising
-I built this using LESS so it would be easy to customise if you want to. All the colors and margins depends on the variables on the top of the LESS file.
+I built this using LESS so it would be easy to customise if you wanted to. All the colors and margins depend on the variables at the top of the LESS file.
 Also you can change the text in the HTML if for example, you want to translate it. But I don't recommend changing the HTML code if you want it to stay responsive.
 
 ##License
