@@ -2,11 +2,64 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>reCaptcha</title>
+	<title>responsive reCAPTCHA - A mobile-first theme for Google's reCAPTCHA by Jaime Caballero</title>
   <link rel="stylesheet" href="responsive_recaptcha.css">
 </head>
+<style type="text/css">
+  html{
+    margin:0;
+    padding:0;
+    background-color: #fbe098;
+  }
+  body{
+    max-width:960px;
+    margin:0 auto;
+    padding:1em;
+    font: 1em/1.25 "Helvetica Neue", Helvetica;
+    background:#fff;
+    color:#111;
+  }
+  hr{
+    border:none;
+    border-top:1px solid #B71800;
+    margin:1.5em 0;
+  }
 
+  a{
+    text-decoration: none;
+    color:#B71800;
+  }
+  a:hover,
+  a:focus,
+  a:active{
+    text-decoration: underline;
+  }
+
+  .light{
+    font-weight: lighter;
+    color:#666;
+  }
+  .nomargin{
+    margin:0;
+  }
+  .center{
+    text-align: center;
+  }
+  
+
+  #responsive_recaptcha{margin: 0 auto;}
+</style>
 <body>
+
+<header class="center">
+  <h1 class="nomargin">responsive reCAPTCHA</h1>
+  <h3 class="nomargin light">A mobile-first theme for Google's reCAPTCHA.</h3>
+</header>
+<section>
+<hr>
+<p><a href="https://github.com/jaicab/responsive-reCAPTCHA/archive/master.zip">Download it</a> or check it out on <a href="https://github.com/jaicab/responsive-reCAPTCHA">GitHub</a>.<br/>This is just a <b>demo</b>. If you want a reCAPTCHA key, please <a href="https://www.google.com/recaptcha/admin/create">sign up for one</a>.</p>
+
+<hr>
  <script type="text/javascript">
  var RecaptchaOptions = {
     theme : 'custom',
@@ -45,5 +98,14 @@
         value="manual_challenge">
  </noscript>
 	</form>
+
+</section>
+
+<footer>
+<hr/>
+<p class="center">Developed by <a href="http://jaicab.com">Jaime Caballero</a></p>
+</footer>
+
+<a href="https://github.com/jaicab/responsive-reCAPTCHA"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
 </body>
 </html>
