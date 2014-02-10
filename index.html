@@ -5,13 +5,16 @@
 	<title>reCaptcha</title>
   <link rel="stylesheet" href="responsive_recaptcha.css">
 </head>
+
 <body>
+
  <script type="text/javascript">
  var RecaptchaOptions = {
     theme : 'custom',
     custom_theme_widget: 'responsive_recaptcha'
  };
  </script>
+
 	<form action="">
 		 <div id="responsive_recaptcha" style="display:none">
 
@@ -35,6 +38,7 @@
  <script type="text/javascript"
     src="http://www.google.com/recaptcha/api/challenge?k=YOUR_PUBLIC_KEY">
  </script>
+ 
  <noscript>
    <iframe src="http://www.google.com/recaptcha/api/noscript?k=YOUR_PUBLIC_KEY"
         height="300" width="500" frameborder="0"></iframe><br>
@@ -44,5 +48,6 @@
         value="manual_challenge">
  </noscript>
 	</form>
+
 </body>
 </html>

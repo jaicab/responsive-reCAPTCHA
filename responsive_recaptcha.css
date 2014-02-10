@@ -1,3 +1,11 @@
+/*! responsive reCAPTCHA by jaicab - https://github.com/jaicab/responsive-reCAPTCHA */
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 #responsive_recaptcha {
   background-color: #b71800;
   padding: 0.5em;
@@ -8,11 +16,6 @@
   font: 0.75em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ffffff;
 }
-#responsive_recaptcha * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 #responsive_recaptcha a {
   color: #ffffff;
   text-decoration: none;
@@ -21,13 +24,23 @@
 #responsive_recaptcha #recaptcha_image {
   width: 100% !important;
   height: auto !important;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
   border-radius: 0.5em;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 #responsive_recaptcha .solution {
   margin-top: 0.5em;
   padding: 0.5em;
   padding-top: 1em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
   border-radius: 0.5em;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   background-color: #fbe098;
   color: #000000;
   display: block;
@@ -47,7 +60,12 @@
 }
 #responsive_recaptcha .options {
   margin-top: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
   border-radius: 0.5em;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 #responsive_recaptcha .options a {
   background-color: #c5523d;
