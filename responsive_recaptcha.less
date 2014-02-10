@@ -1,95 +1,119 @@
+/*! responsive reCAPTCHA by jaicab - https://github.com/jaicab/responsive-reCAPTCHA */
+
+
+// VARIABLES 
 @recaptcha_primary:#B71800;
 @recaptcha_secondary:#fbe098;
 @recaptcha_options:#c5523d;
 @recaptcha_text:#fff;
 @recaptcha_boxtext:#000;
 @recaptcha_margin:0.5em;
-.radius(){
-border-radius:@recaptcha_margin;
+
+
+// MIXINS
+.border-radius (@radius: @recaptcha_margin) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
 }
+
+// REQUIRED CSS
+*, *:after, *:before{
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+// 
 #responsive_recaptcha{
   background-color:@recaptcha_primary;
   padding:@recaptcha_margin;
   border-radius:(@recaptcha_margin*2);
   position:relative;
   overflow:auto;
-  max-width:480px;
+  max-width:480px; //keep it readable
   font:0.75em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:@recaptcha_text;
-}
-#responsive_recaptcha *{
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
-}
-#responsive_recaptcha a{
-  color:@recaptcha_text;
-  text-decoration: none;
-}
 
-#responsive_recaptcha img, #responsive_recaptcha #recaptcha_image{
-  width:100% !important;
-  height: auto !important;
-  .radius;
-}
+  a{
+    color:@recaptcha_text;
+    text-decoration: none;
+  }
 
-#responsive_recaptcha .solution{
-  margin-top:@recaptcha_margin;
-  padding:@recaptcha_margin;
-  padding-top:(@recaptcha_margin*2);
-  .radius;
-  background-color:@recaptcha_secondary;
-  color:@recaptcha_boxtext;
-  display:block;
-}
-#responsive_recaptcha .solution input{
-  display:block;
-  width:100%;
-  margin:(@recaptcha_margin) auto;
-  -webkit-appereance:none;
-  border:1px solid darken(@recaptcha_secondary,20%);
-  font:inherit;
-  font-size:150%;
-  outline:none;
-}
-#responsive_recaptcha .solution input:focus{
-  border-color:@recaptcha_primary;
-}
+  img, #recaptcha_image{
+    width:100% !important;
+    height: auto !important;
+    .border-radius;
+  }
 
-#responsive_recaptcha .options{
-  margin-top:@recaptcha_margin;
-  .radius;
-}
-#responsive_recaptcha .options a{
-  background-color:@recaptcha_options;
-  display: block;
-  padding:@recaptcha_margin;
-  border-top:1px solid @recaptcha_boxtext;
-  border-left:1px solid @recaptcha_boxtext;
-  border-right:1px solid @recaptcha_boxtext;
-}
-#responsive_recaptcha .options a:first-child{
-  border-radius:@recaptcha_margin @recaptcha_margin 0 0;
-}
-#responsive_recaptcha .options a:last-child{
-  border-radius:0 0 @recaptcha_margin @recaptcha_margin;
-  border-bottom:1px solid @recaptcha_boxtext;
-}
-
-@media screen and (min-width:480px){
-  #responsive_recaptcha .solution{
-    float:left;
-    width:66%;
+  .solution{
     margin-top:@recaptcha_margin;
-    padding:(@recaptcha_margin*2);
+    padding:@recaptcha_margin;
+    padding-top:(@recaptcha_margin*2);
+    .border-radius;
+    background-color:@recaptcha_secondary;
+    color:@recaptcha_boxtext;
+    display:block;
+    
+    input{
+      display:block;
+      width:100%;
+      margin:(@recaptcha_margin) auto;
+      -webkit-appereance:none;
+      border:1px solid darken(@recaptcha_secondary,20%);
+      font:inherit;
+      font-size:150%;
+      outline:none;
+    }
+   
+   input:focus{
+      border-color:@recaptcha_primary;
+    }
   }
-  #responsive_recaptcha .solution input{
-    margin:(@recaptcha_margin*0.7) auto;
-    width:90%;
+
+  .options{
+    margin-top:@recaptcha_margin;
+    .border-radius;
+
+    a{
+      background-color:@recaptcha_options;
+      display: block;
+      padding:@recaptcha_margin;
+      border-top:1px solid @recaptcha_boxtext;
+      border-left:1px solid @recaptcha_boxtext;
+      border-right:1px solid @recaptcha_boxtext;
+    }
+    a:first-child{
+      border-radius:@recaptcha_margin @recaptcha_margin 0 0;
+    }
+    a:last-child{
+      border-radius:0 0 @recaptcha_margin @recaptcha_margin;
+      border-bottom:1px solid @recaptcha_boxtext;
+    }
   }
-  #responsive_recaptcha .options{
-    float:right;
-    width:34%;
-    padding-left:@recaptcha_margin;
+}
+@media screen and (min-width:480px){
+  #responsive_recaptcha{
+    .solution{
+      float:left;
+      width:66%;
+      margin-top:@recaptcha_margin;
+      padding:(@recaptcha_margin*2);
+
+      input{
+        margin:(@recaptcha_margin*0.7) auto;
+        width:90%;
+      }
+    }
+
+    .options{
+      float:right;
+      width:34%;
+      padding-left:@recaptcha_margin;
+    }
   }
 }
