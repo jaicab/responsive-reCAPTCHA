@@ -1,7 +1,7 @@
 /*! responsive reCAPTCHA by jaicab - https://github.com/jaicab/responsive-reCAPTCHA */
 
 
-// VARIABLES 
+// $VARIABLES 
 @recaptcha_primary:#B71800;
 @recaptcha_secondary:#fbe098;
 @recaptcha_options:#c5523d;
@@ -10,7 +10,7 @@
 @recaptcha_margin:0.5em;
 
 
-// MIXINS
+// $MIXINS
 .border-radius (@radius: @recaptcha_margin) {
   -webkit-border-radius: @radius;
   -moz-border-radius:    @radius;
@@ -21,14 +21,14 @@
   background-clip:         padding-box;
 }
 
-// REQUIRED CSS
+// $REQUIRED
 *, *:after, *:before{
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
 
-// 
+// $THEME
 #responsive_recaptcha{
   background-color:@recaptcha_primary;
   padding:@recaptcha_margin;
@@ -96,6 +96,7 @@
     }
   }
 }
+
 @media screen and (min-width:480px){
   #responsive_recaptcha{
     .solution{
