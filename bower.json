@@ -1,6 +1,6 @@
 {
   "name": "responsive-reCAPTCHA",
-  "version": "1.0.1",
+  "version": "1.0",
   "homepage": "http://jaicab.com/responsive-reCAPTCHA/",
   "description": "A mobile-first theme for Google's reCAPTCHA",
   "main": "responsive_recaptcha.css"
